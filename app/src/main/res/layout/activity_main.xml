@@ -1,69 +1,66 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:id="@+id/main_activty">
 
-
-
-
-
-
-
-
-
-
-
+        <com.tracker.journey.journeytracker.TraceView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/trace_view"
+            />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/time"
-        android:text="Time"
-        android:layout_alignBaseline="@+id/current_average"
-        android:layout_alignBottom="@+id/current_average"
+        android:text="Time(s) : "
+      android:layout_below="@+id/trace_view"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/speed"
-        android:text="speed"
-
-        android:layout_above="@+id/time"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="113dp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/current_average"
-        android:text="Current Average"
-
-
-        android:layout_alignBaseline="@+id/overall_average"
-        android:layout_alignBottom="@+id/overall_average"
+        android:text="Current Average(km/h) : "
+        android:layout_below="@+id/speed"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/speed"
+        android:text="Speed(km/h) : "
+        android:layout_below="@+id/time"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/overall_average"
-        android:text="Overall Average"
+        android:text="Overall Average (km/h) :"
 
-        android:layout_marginBottom="86dp"
-        android:layout_above="@+id/start_tracking"
-        android:layout_toRightOf="@+id/start_tracking"
-        android:layout_toEndOf="@+id/start_tracking" />
+        android:layout_below="@+id/current_average"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/start_tracking"
         android:text="Start Tracking"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
