@@ -11,10 +11,11 @@
     android:id="@+id/main_activty">
 
         <com.tracker.journey.journeytracker.TraceView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/trace_view"
-            />
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
     <Chronometer
         android:layout_width="wrap_content"
